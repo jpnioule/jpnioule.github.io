@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jean Philippe Nioule | Data Analyst · Stage de fin d'études</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Portfolio de Jean Philippe Nioule, étudiant en MSc 2 Data Marketing à l'INSEEC Paris, à la recherche d'un stage de fin d'études de 6 mois en Data Analytics ou Business Intelligence. SQL, Python, Power BI et IA générative.">
+  <meta name="keywords"
+    content="Data Analyst, Portfolio Data, Python, SQL, Power BI, Tableau, RAG, Machine Learning, Jean Philippe Nioule">
+  <meta name="author" content="Jean Philippe Nioule">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jpnioule-maker.github.io/">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232563eb'/%3E%3Ctext x='32' y='41' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EJP%3C/text%3E%3C/svg%3E">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jean Philippe Nioule | Data Analyst · Stage de fin d'études">
+  <meta property="og:description"
+    content="Étudiant en MSc 2 Data Marketing à la recherche d'un stage de fin d'études de 6 mois en Data Analytics ou Business Intelligence. SQL, Python, Power BI et IA générative.">
+  <meta property="og:url" content="https://jpnioule-maker.github.io/">
+  <!-- Les réseaux sociaux exigent une URL absolue pour l'image d'aperçu -->
+  <meta property="og:image" content="https://jpnioule-maker.github.io/profile.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jean Philippe Nioule",
+    "jobTitle": "Étudiant Data Analyst, stage de fin d'études",
+    "url": "https://jpnioule-maker.github.io/",
+    "email": "philippenioule@gmail.com",
+    "sameAs": [
+      "https://github.com/JpNioule-maker",
+      "https://linkedin.com/in/jean-philippe-nioule"
+    ],
+    "knowsAbout": ["SQL", "Python", "Power BI", "Tableau", "Machine Learning", "IA générative"]
+  }
+  </script>
+
+  <!-- Applique le thème avant l'affichage pour éviter le flash clair/sombre -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || (!t && window.matchMedia("(prefers-color-scheme: light)").matches)) {
+          document.documentElement.classList.add("light-mode");
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Police chargée en parallèle (plus rapide qu'un @import dans le CSS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu</a>
+  <!-- HEADER / NAVIGATION (Glassmorphism Navbar) -->
+  <header id="site-header">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    <div class="nav-container">
+      <a href="#Home" class="brand-logo" id="nav-brand" aria-label="Jean Philippe Nioule, retour à l'accueil">
+        <span class="logo-circle">JP</span>
+        <span class="logo-text">Jean Philippe</span>
+      </a>
+
+      <!-- Menu de navigation pour grand écran -->
+      <nav class="nav-menu" id="nav-menu-desktop" aria-label="Navigation principale">
+        <a href="#Home" class="nav-link active" id="nav-link-home">Accueil</a>
+        <a href="#Projects" class="nav-link" id="nav-link-projects">Projets</a>
+        <a href="#Experience" class="nav-link" id="nav-link-experience">Expérience</a>
+        <a href="#Skills" class="nav-link" id="nav-link-skills">Compétences</a>
+        <a href="#Achievements" class="nav-link" id="nav-link-achievements">Certifications</a>
+        <a href="#Connect" class="nav-link" id="nav-link-connect">Contact</a>
+      </nav>
+
+      <!-- Actions de droite -->
+      <div class="nav-actions">
+        <!-- Commutateur de thème -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Changer de thème" title="Changer de thème">
+          <svg class="moon-icon" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" width="18" height="18">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg class="sun-icon" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" width="18" height="18" style="display:none;">
+            <path fill-rule="evenodd"
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.46 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <a href="https://linkedin.com/in/jean-philippe-nioule" target="_blank" rel="noopener noreferrer" class="nav-social-icon" aria-label="LinkedIn (nouvel onglet)" title="LinkedIn">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <a href="https://github.com/JpNioule-maker" target="_blank" rel="noopener noreferrer" class="nav-social-icon" aria-label="GitHub (nouvel onglet)" title="GitHub">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="#Connect" class="btn btn-primary nav-cta" id="nav-cta-connect">Discutons</a>
+      </div>
+
+      <!-- Burger mobile -->
+      <button class="burger-menu" id="mobile-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobile-nav-overlay">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Navigation mobile -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+      <nav class="mobile-nav-links">
+        <a href="#Home" class="mobile-nav-link" id="mobile-link-home">Accueil</a>
+        <a href="#Projects" class="mobile-nav-link" id="mobile-link-projects">Projets</a>
+        <a href="#Experience" class="mobile-nav-link" id="mobile-link-experience">Expérience</a>
+        <a href="#Skills" class="mobile-nav-link" id="mobile-link-skills">Compétences</a>
+        <a href="#Achievements" class="mobile-nav-link" id="mobile-link-achievements">Certifications</a>
+        <a href="#Connect" class="mobile-nav-link" id="mobile-link-connect">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN MAIN CONTAINER FOR PAGES -->
+  <main id="main-content">
+    
+    <!-- PAGE 1: HOME -->
+    <section class="page-container" id="page-home">
+      <!-- 1. Hero plein écran -->
+      <div class="hero-cover-screen">
+        <p class="welcome-label">Portfolio</p>
+        <h1 class="hero-name">Jean Philippe Nioule</h1>
+        <h2 class="hero-title">Stage de fin d'études · Data Analytics & Business Intelligence</h2>
+        <p class="hero-tagline">Transformer la donnée brute en indicateurs clés et en insights stratégiques pour guider les décisions d'entreprise.</p>
+        <div class="hero-cta-row">
+          <a href="#Projects" class="btn btn-primary" id="btn-explore-projects">Découvrir mes projets</a>
+        </div>
+      </div>
+
+      <!-- 2. Profile Details & About (Below the fold) -->
+      <div id="home-details" class="home-details-section">
+        <div class="home-details-grid">
+          <!-- Left side: Avatar, status badge, action buttons -->
+          <div class="home-details-left">
+            <div class="avatar-wrap">
+              <img src="profile.jpg" alt="Portrait de Jean Philippe Nioule" class="hero-avatar" width="200" height="200" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('avatar-missing'); this.remove();">
+              <span class="avatar-initials" aria-hidden="true">JPN</span>
+            </div>
+            <div class="hero-badge-container">
+              <span class="status-badge pulsing">Stage 6 mois · Dès maintenant</span>
+            </div>
+            <div class="hero-actions">
+              <a href="#Connect" class="btn btn-primary" id="btn-contact-me">Me contacter</a>
+              <a href="https://linkedin.com/in/jean-philippe-nioule" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btn-linkedin">
+                Voir mon profil LinkedIn
+              </a>
+            </div>
+          </div>
+          
+          <!-- Right side: typewriter and "À propos de moi" -->
+          <div class="home-details-right">
+            <h3 class="hero-title-typewriter" aria-label="Futur Data Analyst">
+              <span class="typewriter" id="hero-typewriter" aria-hidden="true">Futur Data Analyst</span>
+            </h3>
+            <div class="about-content">
+              <h3 class="section-title-small">À propos de moi</h3>
+              <p class="about-text">
+                Étudiant en MSc 2 Data Marketing à l’INSEEC Paris, je recherche un <strong>stage de fin d’études en Data Analytics ou Business Intelligence</strong>.
+              </p>
+              <p class="about-text">
+                Fort de 7 ans d’expérience en relation client B2B et reporting commercial, je me spécialise dans l’analyse de données. J’utilise SQL, Python et Power BI pour analyser les performances, concevoir des tableaux de bord et produire des recommandations utiles à la décision.
+              </p>
+              <p class="about-text">
+                Mon profil allie compétences analytiques et compréhension métier, notamment des KPI, de la conversion et de la satisfaction client. Je m’intéresse aussi à l’IA générative et aux approches RAG.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDUCATION SECTION -->
+        <div class="about-education-section">
+          <div class="education-grid">
+            <h3 class="section-title-small">Mon parcours académique</h3>
+            
+            <div class="education-card">
+              <div class="education-header">
+                <div class="education-title-group">
+                  <h4>INSEEC Paris</h4>
+                  <p class="education-location">Paris, France</p>
+                </div>
+                <span class="education-year">Mars 2026 – févr. 2027</span>
+              </div>
+              <p class="education-degree">Master 2 Data Marketing Manager</p>
+              <p class="education-desc-text">Spécialisation en Data Analytics et Business Intelligence, avec une approche orientée performance marketing et décision métier.</p>
+              
+              <div class="coursework-section">
+                <p class="coursework-title">Compétences et cours clés :</p>
+                <div class="badges-wrapper">
+                  <span class="badge">Python</span>
+                  <span class="badge">SQL & Bases de données</span>
+                  <span class="badge">Power BI</span>
+                  <span class="badge">Tableau</span>
+                  <span class="badge">Data visualisation</span>
+                  <span class="badge">KPI & Reporting</span>
+                  <span class="badge">Segmentation</span>
+                  <span class="badge">Web Analytics</span>
+                  <span class="badge">IA générative & APIs</span>
+                  <span class="badge">Analyse exploratoire</span>
+                  <span class="badge">Gestion de projet agile</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="education-card">
+              <div class="education-header">
+                <div class="education-title-group">
+                  <h4>ISCOM Lille</h4>
+                  <p class="education-location">Lille, France</p>
+                </div>
+                <span class="education-year">Sept. 2023 – juil. 2024</span>
+              </div>
+              <p class="education-degree">Master 1 Marketing & Communication</p>
+              <p class="education-desc-text">Formation aux stratégies marketing et à la communication digitale, avec un intérêt particulier pour le Web Analytics, l'analyse des performances et l'exploitation des données au service des décisions marketing.</p>
+              
+              <div class="coursework-section">
+                <p class="coursework-title">Compétences et cours clés :</p>
+                <div class="badges-wrapper">
+                  <span class="badge">Analyse marketing & Web Analytics</span>
+                  <span class="badge">Stratégie marketing & digitale</span>
+                  <span class="badge">Gestion de projet</span>
+                  <span class="badge">Communication digitale & création de contenu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: PROJECTS -->
+    <section class="page-container" id="page-projects" style="display: none;">
+      <div class="page-header-section">
+        <p class="page-subtitle">Mes réalisations</p>
+        <h1 class="page-title">Projets de référence</h1>
+        <p class="page-description">Projets personnels et académiques menés sur des jeux de données publics ou simulés : SQL, analyse statistique, segmentation clients, business intelligence et IA générative.</p>
+      </div>
+
+      <!-- Filtres -->
+      <div class="filters-wrapper" role="group" aria-label="Filtrer les projets par technologie">
+        <button class="filter-btn active" data-filter="all" id="filter-all">Tous <span class="filter-count">4</span></button>
+        <button class="filter-btn" data-filter="sql" id="filter-sql">SQL <span class="filter-count">1</span></button>
+        <button class="filter-btn" data-filter="powerbi" id="filter-powerbi">Power BI <span class="filter-count">1</span></button>
+        <button class="filter-btn" data-filter="python" id="filter-python">Python <span class="filter-count">2</span></button>
+        <button class="filter-btn" data-filter="tableau" id="filter-tableau">Tableau <span class="filter-count">1</span></button>
+        <button class="filter-btn" data-filter="machine-learning" id="filter-ml">Machine learning <span class="filter-count">2</span></button>
+        <button class="filter-btn" data-filter="statistiques" id="filter-stats">Statistiques <span class="filter-count">1</span></button>
+        <button class="filter-btn" data-filter="ia" id="filter-ia">IA générative <span class="filter-count">1</span></button>
+      </div>
+
+      <!-- Grille des projets -->
+      <div class="projects-grid" id="projects-list">
+        <!-- Cartes ordonnées de la plus récente à la plus ancienne ; data-id = id dans projectsData (script.js) -->
+        <article class="project-card" data-id="7" data-tags="sql powerbi" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="project-card-header">
+            <span class="project-date">2026</span>
+            <span class="project-number">01</span>
+          </div>
+          <div class="project-card-body">
+            <p class="project-category">SQL &amp; bases de données</p>
+            <h3 class="project-card-title">Ventes retail : analyses SQL et dashboard Power BI</h3>
+            <p class="project-card-desc">Ventes simulées d'une enseigne fictive (6 magasins et e-commerce) : analyses SQL de la croissance, de la marge et des remises, restituées dans un dashboard Power BI.</p>
+            <div class="project-card-kpi">
+              <span class="kpi-value">+59,5 % CA Audio</span>
+              <span class="kpi-label">2025 vs 2024 · données simulées</span>
+            </div>
+            <div class="project-card-tags">
+              <span class="tag-pill">PostgreSQL</span>
+              <span class="tag-pill">Fonctions de fenêtre</span>
+              <span class="tag-pill">Power BI</span>
+            </div>
+            <span class="project-card-more" aria-hidden="true">Voir le détail du projet</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-id="5" data-tags="ia" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="project-card-header">
+            <span class="project-date">2026</span>
+            <span class="project-number">02</span>
+          </div>
+          <div class="project-card-body">
+            <p class="project-category">IA générative</p>
+            <h3 class="project-card-title">Luméa : écosystème marketing IA</h3>
+            <p class="project-card-desc">Chatbot RAG, agent de contenu Instagram, nurturing e-mail avec n8n et landing page, pour une marque fictive de skincare.</p>
+            <div class="project-card-kpi">
+              <span class="kpi-value">4 livrables</span>
+              <span class="kpi-label">Périmètre</span>
+            </div>
+            <div class="project-card-tags">
+              <span class="tag-pill">Claude API</span>
+              <span class="tag-pill">Chroma</span>
+              <span class="tag-pill">n8n</span>
+            </div>
+            <span class="project-card-more" aria-hidden="true">Voir le détail du projet</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-id="3" data-tags="python statistiques machine-learning" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="project-card-header">
+            <span class="project-date">2026</span>
+            <span class="project-number">03</span>
+          </div>
+          <div class="project-card-body">
+            <p class="project-category">Statistiques & clustering</p>
+            <h3 class="project-card-title">Online Retail : ventes et segmentation</h3>
+            <p class="project-card-desc">Projet d'équipe sur 392 000 transactions : ANOVA, régression multiple et segmentation RFM par K-Means (ma partie).</p>
+            <div class="project-card-kpi">
+              <span class="kpi-value">4 segments clients</span>
+              <span class="kpi-label">Ma partie</span>
+            </div>
+            <div class="project-card-tags">
+              <span class="tag-pill">Python</span>
+              <span class="tag-pill">K-Means</span>
+              <span class="tag-pill">ANOVA</span>
+            </div>
+            <span class="project-card-more" aria-hidden="true">Voir le détail du projet</span>
+          </div>
+        </article>
+
+
+        <article class="project-card" data-id="1" data-tags="python machine-learning" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="project-card-header">
+            <span class="project-date">2026</span>
+            <span class="project-number">04</span>
+          </div>
+          <div class="project-card-body">
+            <p class="project-category">Marketing & clustering</p>
+            <h3 class="project-card-title">Segmentation clients RFM & K-Means</h3>
+            <p class="project-card-desc">Segmentation comportementale de 100 000 clients du dataset public Olist avec K-Means, pour proposer des campagnes marketing ciblées par profil.</p>
+            <div class="project-card-kpi">
+              <span class="kpi-value">4 segments clients</span>
+              <span class="kpi-label">Résultat</span>
+            </div>
+            <div class="project-card-tags">
+              <span class="tag-pill">Python</span>
+              <span class="tag-pill">K-Means</span>
+              <span class="tag-pill">RFM</span>
+            </div>
+            <span class="project-card-more" aria-hidden="true">Voir le détail du projet</span>
+          </div>
+        </article>
+
+
+        <article class="project-card" data-id="6" data-tags="tableau" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="project-card-header">
+            <span class="project-date"></span>
+            <span class="project-number">05</span>
+          </div>
+          <div class="project-card-body">
+            <p class="project-category">Business intelligence</p>
+            <h3 class="project-card-title">Dashboard Tableau : performance commerciale</h3>
+            <p class="project-card-desc">Suivi des ventes 2018-2020 : 4 KPI, carte et Top 10 pays, évolution du chiffre d'affaires, lignes de produits et saisonnalité.</p>
+            <div class="project-card-kpi">
+              <span class="kpi-value">4 KPI</span>
+              <span class="kpi-label">Livrable</span>
+            </div>
+            <div class="project-card-tags">
+              <span class="tag-pill">Tableau</span>
+              <span class="tag-pill">KPI</span>
+              <span class="tag-pill">Dataviz</span>
+            </div>
+            <span class="project-card-more" aria-hidden="true">Voir le détail du projet</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PAGE 3: EXPERIENCE -->
+    <section class="page-container" id="page-experience" style="display: none;">
+      <div class="page-header-section">
+        <p class="page-subtitle">Mon parcours</p>
+        <h1 class="page-title">Expériences professionnelles</h1>
+        <p class="page-description">Découvrez mes expériences marquantes où j'ai allié relation client, communication et analyse de données.</p>
+      </div>
+
+      <!-- Vertical Timeline adaptation from Target Layout -->
+      <div class="experience-timeline" id="experience-timeline">
+        <div class="timeline-line"></div>
+        
+        <!-- Experience 1 -->
+        <div class="timeline-container left">
+          <div class="timeline-dot"></div>
+          <div class="experience-box">
+            <span class="experience-period">Mai 2024 – septembre 2024</span>
+            <h3 class="experience-job-title">Chargé de marketing &amp; communication</h3>
+            <h4 class="experience-company">Association Amitié Partage</h4>
+            <p class="experience-location">Roubaix, France</p>
+            <p class="experience-desc">Stratégie éditoriale et suivi des KPI sur les réseaux sociaux, création de contenus digitaux et analyse de données pour le rapport d'activité 2023.</p>
+            
+            <div class="experience-highlights">
+              <h5>Missions :</h5>
+              <ul>
+                <li>Pilotage de la stratégie éditoriale des réseaux sociaux et suivi des performances via des indicateurs KPI.</li>
+                <li>Création de supports de communication digitale : visuels, infographies et contenus marketing.</li>
+                <li>Élaboration du rapport d'activité 2023 : collecte, analyse et synthèse de données.</li>
+                <li>Rédaction et diffusion d'une newsletter (email marketing) et mise à jour éditoriale du site internet.</li>
+              </ul>
+            </div>
+            
+            <div class="experience-skills-badges">
+              <span class="skill-badge">KPI</span>
+              <span class="skill-badge">Analyse de données</span>
+              <span class="skill-badge">Reporting</span>
+              <span class="skill-badge">Marketing digital</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-container right">
+          <div class="timeline-dot"></div>
+          <div class="experience-box">
+            <span class="experience-period">Octobre 2016 – août 2023 · 7 ans</span>
+            <h3 class="experience-job-title">Chargé de relation clientèle &amp; commerciale</h3>
+            <h4 class="experience-company">MTN Côte d'Ivoire</h4>
+            <p class="experience-location">Abidjan, Côte d'Ivoire</p>
+            <p class="experience-desc">Gestion d'un portefeuille clients B2B et B2C, pilotage de la qualité de service et reporting quotidien de la performance de 50 commerciaux.</p>
+            
+            <div class="experience-highlights">
+              <h5>Missions :</h5>
+              <ul>
+                <li>Développement et fidélisation d'un portefeuille clients B2B et B2C, de la prospection à la vente de produits et services.</li>
+                <li>Pilotage de la qualité de service via la réalisation d'enquêtes de satisfaction client.</li>
+                <li>Analyse de données commerciales et reporting quotidien de la performance de 50 commerciaux.</li>
+                <li>Rédaction de rapports d'activité réguliers à destination de la direction.</li>
+              </ul>
+            </div>
+            
+            <div class="experience-skills-badges">
+              <span class="skill-badge">Reporting commercial</span>
+              <span class="skill-badge">Relation client</span>
+              <span class="skill-badge">B2B &amp; B2C</span>
+              <span class="skill-badge">Enquêtes de satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: SKILLS -->
+    <section class="page-container" id="page-skills" style="display: none;">
+      <div class="page-header-section">
+        <p class="page-subtitle">Mon expertise</p>
+        <h1 class="page-title">Compétences techniques et métiers</h1>
+        <p class="page-description">Le détail de mes compétences, regroupées par domaine.</p>
+        <div style="margin-top: 1rem; display: flex; justify-content: center;">
+          <button id="skills-toggle-all-btn" class="btn btn-secondary btn-sm" aria-expanded="true" style="font-size: 0.85rem; padding: 0.45rem 1rem; border-radius: var(--radius-pill); gap: 0.5rem; display: inline-flex; align-items: center;">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16" height="16" id="skills-toggle-all-icon" aria-hidden="true" style="transform: rotate(180deg);">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+            <span id="skills-toggle-all-text">Tout réduire</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Expandable Skills Cards Grid (Accordion target layout) -->
+      <div class="skills-accordion-grid" id="skills-accordion-grid">
+        
+        <!-- Accordion 1: SQL & DB -->
+        <div class="skill-accordion-card active" id="accordion-sql">
+          <button class="accordion-header" aria-expanded="true" aria-controls="panel-sql">
+            <span class="accordion-title-wrapper">
+              <span class="accordion-icon-box">
+                <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+              </span>
+              <span class="accordion-title">Bases de données & SQL</span>
+            </span>
+            <span class="accordion-chevron"></span>
+          </button>
+          <div class="accordion-panel" id="panel-sql">
+            <div class="accordion-content">
+              <ul class="skills-list">
+                <li>Écriture de requêtes SQL complexes (jointures, CTE, fonctions de fenêtrage)</li>
+                <li>Modélisation logique de bases de données transactionnelles (PostgreSQL)</li>
+                <li>Optimisation des performances des requêtes analytiques</li>
+                <li>Scripts automatisés d'import et de mise à jour de données</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 2: Python & Data Science -->
+        <div class="skill-accordion-card active" id="accordion-python">
+          <button class="accordion-header" aria-expanded="true" aria-controls="panel-python">
+            <span class="accordion-title-wrapper">
+              <span class="accordion-icon-box">
+                <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+              </span>
+              <span class="accordion-title">Python & analyse de données</span>
+            </span>
+            <span class="accordion-chevron"></span>
+          </button>
+          <div class="accordion-panel" id="panel-python">
+            <div class="accordion-content">
+              <ul class="skills-list">
+                <li>Manipulation de données avec Pandas et NumPy</li>
+                <li>Clustering non supervisé (K-Means, profilage RFM)</li>
+                <li>Modélisation prédictive et régressions (Statsmodels, Scikit-Learn)</li>
+                <li>Tests statistiques inférentiels (ANOVA, Kruskal-Wallis, Shapiro-Wilk)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 3: BI & Dataviz -->
+        <div class="skill-accordion-card active" id="accordion-bi">
+          <button class="accordion-header" aria-expanded="true" aria-controls="panel-bi">
+            <span class="accordion-title-wrapper">
+              <span class="accordion-icon-box">
+                <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                </svg>
+              </span>
+              <span class="accordion-title">Business intelligence & dataviz</span>
+            </span>
+            <span class="accordion-chevron"></span>
+          </button>
+          <div class="accordion-panel" id="panel-bi">
+            <div class="accordion-content">
+              <ul class="skills-list">
+                <li>Modélisation décisionnelle en étoile</li>
+                <li>Création de mesures avancées en langage DAX (Power BI)</li>
+                <li>Conception de dashboards sur Tableau et Power BI</li>
+                <li>Microsoft Excel avancé (Power Query, tableaux croisés dynamiques)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 4: GenAI & RAG -->
+        <div class="skill-accordion-card active" id="accordion-ai">
+          <button class="accordion-header" aria-expanded="true" aria-controls="panel-ai">
+            <span class="accordion-title-wrapper">
+              <span class="accordion-icon-box">
+                <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                  <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                </svg>
+              </span>
+              <span class="accordion-title">IA générative & RAG</span>
+            </span>
+            <span class="accordion-chevron"></span>
+          </button>
+          <div class="accordion-panel" id="panel-ai">
+            <div class="accordion-content">
+              <ul class="skills-list">
+                <li>Implémentation de RAG (Retrieval-Augmented Generation) avec Chroma</li>
+                <li>Vectorisation et indexation sémantique (modèles d'embeddings multilingues)</li>
+                <li>Intégration d'API LLM (Anthropic Claude)</li>
+                <li>Automatisation marketing avec n8n (nurturing e-mail, agent de contenu) et Airtable</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages Section at Bottom (Target layout: International profile) -->
+      <div class="languages-section">
+        <h3 class="section-title-small">Langues</h3>
+        <div class="languages-grid">
+          <div class="language-card">
+            <span class="flag-emoji" aria-hidden="true">🇫🇷</span>
+            <span class="lang-name">Français</span>
+            <span class="lang-level">Langue maternelle</span>
+          </div>
+          <div class="language-card">
+            <span class="flag-emoji" aria-hidden="true">🇬🇧</span>
+            <span class="lang-name">Anglais</span>
+            <span class="lang-level">Intermédiaire (B1)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 5: ACHIEVEMENTS -->
+    <section class="page-container" id="page-achievements" style="display: none;">
+      <div class="page-header-section">
+        <p class="page-subtitle">Au-delà du parcours</p>
+        <h1 class="page-title">Certifications et formations</h1>
+        <p class="page-description">Certifications obtenues, en cours de préparation, et formations complémentaires.</p>
+      </div>
+
+      <!-- Achievements cards structure adaptation -->
+      <div class="achievements-grid" id="achievements-grid">
+        <!-- Achievement 1 -->
+        <article class="achievement-card">
+          <div class="achievement-header">
+            <span class="achievement-category">Certification SQL</span>
+            <span class="achievement-year">2025</span>
+          </div>
+          <h3 class="achievement-title">SQL Intermediate <span class="achievement-issuer">· DataCamp</span></h3>
+          <p class="achievement-desc">Certification validant la maîtrise des jointures avancées, des sous-requêtes et des fonctions d'agrégation indispensables pour la préparation de données.</p>
+        </article>
+
+        <!-- Achievement 2 -->
+        <article class="achievement-card">
+          <div class="achievement-header">
+            <span class="achievement-category">Microsoft BI</span>
+            <span class="achievement-year">En cours</span>
+          </div>
+          <h3 class="achievement-title">Power BI Data Analyst (PL-300) <span class="achievement-issuer">· Microsoft</span></h3>
+          <p class="achievement-desc">Préparation intensive à la certification officielle Microsoft validant la capacité à modéliser, nettoyer et présenter des données avec Power BI.</p>
+        </article>
+
+        <!-- Achievement 3 -->
+        <article class="achievement-card">
+          <div class="achievement-header">
+            <span class="achievement-category">Formation data</span>
+            <span class="achievement-year">2024</span>
+          </div>
+          <h3 class="achievement-title">Data Analyst <span class="achievement-issuer">· Techaway Liora</span></h3>
+          <p class="achievement-desc">Parcours intensif et pratique axé sur la manipulation de bases de données, le requêtage SQL et le développement de dashboards analytiques opérationnels.</p>
+        </article>
+
+        <!-- Achievement 4 -->
+        <article class="achievement-card">
+          <div class="achievement-header">
+            <span class="achievement-category">Protection des données</span>
+            <span class="achievement-year">Attestation</span>
+          </div>
+          <h3 class="achievement-title">L'atelier RGPD <span class="achievement-issuer">· CNIL</span></h3>
+          <p class="achievement-desc">MOOC officiel de la CNIL sur le RGPD : notions clés, principes de la protection des données et responsabilités des acteurs. Un socle indispensable pour manipuler des données clients en conformité.</p>
+        </article>
+      </div>
+
+      <!-- Transferable Skills (Target layout) -->
+      <div class="transferable-skills-section">
+        <h3 class="section-title-small">Compétences transversales</h3>
+        <div class="transferable-badges-grid">
+          <span class="transfer-badge">Esprit d'analyse</span>
+          <span class="transfer-badge">Autonomie technique</span>
+          <span class="transfer-badge">Curiosité technologique</span>
+          <span class="transfer-badge">Orientation solution</span>
+          <span class="transfer-badge">Résilience</span>
+          <span class="transfer-badge">Rigueur méthodologique (CRISP-DM)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 6: CONNECT -->
+    <section class="page-container" id="page-connect" style="display: none;">
+      <div class="page-header-section">
+        <p class="page-subtitle">Contact</p>
+        <h1 class="page-title">Discutons de vos projets</h1>
+        <p class="page-description">Vous recherchez un stagiaire en Data Analytics ou Business Intelligence ? Je suis disponible dès maintenant pour un stage de fin d'études de 6 mois. N'hésitez pas à me laisser un message.</p>
+      </div>
+
+      <!-- Split layout adaptation: Form on left, Social cards on right -->
+      <div class="connect-split-layout" id="connect-split-layout">
+        <!-- Formulaire de contact -->
+        <div class="connect-form-box">
+          <h3 class="section-title-small">M'envoyer un message</h3>
+          <!-- Envoi via Formspree si un identifiant remplace YOUR_FORM_ID ; sinon, ouverture de la messagerie du visiteur -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="form-element">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Nom complet</label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="Votre nom" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email" class="form-label">Adresse e-mail</label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="nom@entreprise.com" autocomplete="email" required>
+            </div>
+            <div class="form-group">
+              <label for="form-message" class="form-label">Message</label>
+              <textarea id="form-message" name="message" class="form-textarea" rows="6" placeholder="Bonjour, j'ai vu votre portfolio..." required></textarea>
+            </div>
+            <!-- Honeypot anti-spam (champ invisible, doit rester vide) -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button type="submit" class="btn btn-primary" id="form-submit-btn">Envoyer le message</button>
+          </form>
+        </div>
+
+        <!-- Coordonnées et réseaux -->
+        <div class="connect-info-box">
+          <h3 class="section-title-small">Coordonnées</h3>
+          
+          <div class="contact-details-list">
+            <!-- Mail -->
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg></div>
+              <div class="contact-detail-text">
+                <span class="detail-label">E-mail</span>
+                <a class="detail-value" id="mail-link" href="mailto:philippenioule@gmail.com">philippenioule@gmail.com</a>
+                <button type="button" class="copy-tooltip" id="email-copy-btn"><span id="copy-tooltip">Copier l'adresse</span></button>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg></div>
+              <div class="contact-detail-text">
+                <span class="detail-label">Localisation</span>
+                <span class="detail-value">Paris, France (mobile, ouvert au télétravail)</span>
+              </div>
+            </div>
+
+            <!-- Availability -->
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0"/></svg></div>
+              <div class="contact-detail-text">
+                <span class="detail-label">Disponibilité</span>
+                <span class="detail-value">Stage de fin d'études de 6 mois, disponible dès maintenant</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social links custom blocks -->
+          <div class="social-connect-grid">
+            <a href="https://linkedin.com/in/jean-philippe-nioule" target="_blank" rel="noopener noreferrer" class="social-connect-card">
+              <div class="social-connect-card-icon">
+                <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </div>
+              <div class="social-connect-card-info">
+                <h4>LinkedIn</h4>
+                <p>Se connecter professionnellement</p>
+              </div>
+            </a>
+
+            <a href="https://github.com/JpNioule-maker" target="_blank" rel="noopener noreferrer" class="social-connect-card">
+              <div class="social-connect-card-icon">
+                <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </div>
+              <div class="social-connect-card-info">
+                <h4>GitHub</h4>
+                <p>Consulter mes dépôts de code</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer id="site-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Jean Philippe Nioule. Tous droits réservés.</p>
+      <nav class="footer-nav" aria-label="Liens de pied de page">
+        <a href="#Projects">Projets</a>
+        <a href="#Experience">Expérience</a>
+        <a href="#Connect">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://linkedin.com/in/jean-philippe-nioule" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <a href="https://github.com/JpNioule-maker" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL OVERLAY INTERACTIVE PROJETS -->
+  <div class="modal-overlay" id="project-modal-overlay">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+      <!-- Rempli dynamiquement en JS -->
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notification" id="contact-toast" role="status" aria-live="polite">
+    <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="20" height="20">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.746 3.746 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 3.068 1.593 3.068 1.593a3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+    </svg>
+    <span class="toast-message">Message envoyé avec succès !</span>
+  </div>
+
+  <!-- FIXED SCROLL DOWN ARROW BUTTON WITH UX TOOLTIP -->
+  <div class="fixed-scroll-wrapper" id="fixed-scroll-wrapper">
+    <span class="fixed-scroll-tooltip" id="fixed-scroll-tooltip">Défiler vers le bas</span>
+    <button class="fixed-scroll-down-btn" id="fixed-scroll-down-btn" aria-label="Défiler vers le bas">
+      <svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" width="18" height="18" id="fixed-scroll-icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>
