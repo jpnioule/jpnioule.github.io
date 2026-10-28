@@ -41,7 +41,7 @@ const projectsData = [
     role: "Conception et développement (projet individuel, M2 INSEEC)",
     images: [
       { src: "images/lumea-rag.png", alt: "Le chatbot RAG en action : question sur les peaux sensibles et réponse de Claude, fondée uniquement sur les fiches produits de la marque" },
-      { src: "images/lumea-landing.png", alt: "Landing page Luméa et son assistant de démonstration" }
+      { src: "images/lumea-landing.webp", alt: "Landing page Luméa et son assistant de démonstration, qui reprend le même catalogue que le chatbot RAG" }
     ],
     title: "Luméa : écosystème marketing piloté par l'IA",
     subtitle: "Node.js / Chroma / API Anthropic (Claude) / n8n / Airtable",
