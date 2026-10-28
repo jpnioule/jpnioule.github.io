@@ -2924,22 +2924,6 @@ textarea:focus-visible,
   }
 }
 
-/* Disponibilité sous la photo : icône de validation verte + texte */
-.avatar-availability {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: -0.6rem 0 0;
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  text-align: center;
-}
-.avatar-availability-icon {
-  flex: none;
-  color: var(--accent-emerald);
-}
-
 /* ===== Lisibilité du bloc « À propos » et rythme vertical ===== */
 /* Lignes plus courtes : environ 70 caractères, la longueur la plus confortable à lire */
 .home-details-right .about-content {

@@ -166,13 +166,6 @@
               <img src="profile.jpg" alt="Portrait de Jean Philippe Nioule" class="hero-avatar" width="200" height="200" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('avatar-missing'); this.remove();">
               <span class="avatar-initials" aria-hidden="true">JPN</span>
             </div>
-            <p class="avatar-availability">
-              <svg class="avatar-availability-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <circle cx="12" cy="12" r="9.25" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 12.25l2.5 2.5 5-5.25" />
-              </svg>
-              Disponible pour un stage de 6 mois
-            </p>
             <div class="hero-actions">
               <a href="#Connect" class="btn btn-primary" id="btn-contact-me">Me contacter</a>
               <a href="https://linkedin.com/in/jean-philippe-nioule" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btn-linkedin">
@@ -270,20 +263,19 @@
       </div>
 
       <!-- Filtres -->
-      <div class="filters-wrapper" role="group" aria-label="Filtrer les projets par technologie">
-        <button class="filter-btn active" data-filter="all" id="filter-all">Tous <span class="filter-count">4</span></button>
-        <button class="filter-btn" data-filter="sql" id="filter-sql">SQL &amp; Power BI <span class="filter-count">1</span></button>
-        <button class="filter-btn" data-filter="python" id="filter-python">Python <span class="filter-count">2</span></button>
-        <button class="filter-btn" data-filter="tableau" id="filter-tableau">Tableau <span class="filter-count">1</span></button>
-        <button class="filter-btn" data-filter="machine-learning" id="filter-ml">Machine learning <span class="filter-count">2</span></button>
-        <button class="filter-btn" data-filter="statistiques" id="filter-stats">Statistiques <span class="filter-count">1</span></button>
-        <button class="filter-btn" data-filter="ia" id="filter-ia">IA générative <span class="filter-count">1</span></button>
+      <div class="filters-wrapper" role="group" aria-label="Filtrer par projet">
+        <button class="filter-btn active" data-filter="all" id="filter-all">Tous <span class="filter-count">5</span></button>
+        <button class="filter-btn" data-filter="ventes-retail" id="filter-ventes-retail">Ventes retail <span class="filter-count">1</span></button>
+        <button class="filter-btn" data-filter="lumea" id="filter-lumea">Luméa <span class="filter-count">1</span></button>
+        <button class="filter-btn" data-filter="online-retail" id="filter-online-retail">Online Retail <span class="filter-count">1</span></button>
+        <button class="filter-btn" data-filter="olist" id="filter-olist">Segmentation Olist <span class="filter-count">1</span></button>
+        <button class="filter-btn" data-filter="dashboard-tableau" id="filter-dashboard-tableau">Dashboard Tableau <span class="filter-count">1</span></button>
       </div>
 
       <!-- Grille des projets -->
       <div class="projects-grid" id="projects-list">
         <!-- Cartes ordonnées de la plus récente à la plus ancienne ; data-id = id dans projectsData (script.js) -->
-        <article class="project-card" data-id="7" data-tags="sql powerbi" tabindex="0" role="button" aria-haspopup="dialog">
+        <article class="project-card" data-id="7" data-tags="ventes-retail" tabindex="0" role="button" aria-haspopup="dialog">
           <div class="project-card-header">
             <span class="project-date">2026</span>
             <span class="project-number">01</span>
@@ -298,14 +290,14 @@
             </div>
             <div class="project-card-tags">
               <span class="tag-pill">PostgreSQL</span>
-              <span class="tag-pill">Fonctions de fenêtre</span>
               <span class="tag-pill">Power BI</span>
+              <span class="tag-pill">DAX</span>
             </div>
             <span class="project-card-more" aria-hidden="true">Voir le détail du projet</span>
           </div>
         </article>
 
-        <article class="project-card" data-id="5" data-tags="ia" tabindex="0" role="button" aria-haspopup="dialog">
+        <article class="project-card" data-id="5" data-tags="lumea" tabindex="0" role="button" aria-haspopup="dialog">
           <div class="project-card-header">
             <span class="project-date">2026</span>
             <span class="project-number">02</span>
@@ -327,7 +319,7 @@
           </div>
         </article>
 
-        <article class="project-card" data-id="3" data-tags="python statistiques machine-learning" tabindex="0" role="button" aria-haspopup="dialog">
+        <article class="project-card" data-id="3" data-tags="online-retail" tabindex="0" role="button" aria-haspopup="dialog">
           <div class="project-card-header">
             <span class="project-date">2026</span>
             <span class="project-number">03</span>
@@ -342,15 +334,15 @@
             </div>
             <div class="project-card-tags">
               <span class="tag-pill">Python</span>
-              <span class="tag-pill">K-Means</span>
-              <span class="tag-pill">ANOVA</span>
+              <span class="tag-pill">pandas</span>
+              <span class="tag-pill">scikit-learn</span>
             </div>
             <span class="project-card-more" aria-hidden="true">Voir le détail du projet</span>
           </div>
         </article>
 
 
-        <article class="project-card" data-id="1" data-tags="python machine-learning" tabindex="0" role="button" aria-haspopup="dialog">
+        <article class="project-card" data-id="1" data-tags="olist" tabindex="0" role="button" aria-haspopup="dialog">
           <div class="project-card-header">
             <span class="project-date">2026</span>
             <span class="project-number">04</span>
@@ -365,15 +357,15 @@
             </div>
             <div class="project-card-tags">
               <span class="tag-pill">Python</span>
-              <span class="tag-pill">K-Means</span>
-              <span class="tag-pill">RFM</span>
+              <span class="tag-pill">pandas</span>
+              <span class="tag-pill">scikit-learn</span>
             </div>
             <span class="project-card-more" aria-hidden="true">Voir le détail du projet</span>
           </div>
         </article>
 
 
-        <article class="project-card" data-id="6" data-tags="tableau" tabindex="0" role="button" aria-haspopup="dialog">
+        <article class="project-card" data-id="6" data-tags="dashboard-tableau" tabindex="0" role="button" aria-haspopup="dialog">
           <div class="project-card-header">
             <span class="project-date"></span>
             <span class="project-number">05</span>
@@ -387,9 +379,7 @@
               <span class="kpi-label">Livrable</span>
             </div>
             <div class="project-card-tags">
-              <span class="tag-pill">Tableau</span>
-              <span class="tag-pill">KPI</span>
-              <span class="tag-pill">Dataviz</span>
+              <span class="tag-pill">Tableau Desktop</span>
             </div>
             <span class="project-card-more" aria-hidden="true">Voir le détail du projet</span>
           </div>
