@@ -39,31 +39,33 @@ const projectsData = [
   {
     id: 5,
     role: "Conception et développement (projet individuel, M2 INSEEC)",
-    image: "images/lumea-chatbot.png",
-    imageAlt: "Landing page Luméa avec le chatbot RAG intégré",
+    images: [
+      { src: "images/lumea-rag.png", alt: "Le chatbot RAG en action : question sur les peaux sensibles et réponse de Claude, fondée uniquement sur les fiches produits de la marque" },
+      { src: "images/lumea-landing.png", alt: "Landing page Luméa et son assistant de démonstration" }
+    ],
     title: "Luméa : écosystème marketing piloté par l'IA",
     subtitle: "Node.js / Chroma / API Anthropic (Claude) / n8n / Airtable",
-    kpi: "4 livrables IA fonctionnels",
+    kpi: "Bon passage dans le top 3 : 10/10 (contre 5/10)",
     tags: ["ia", "rag", "n8n"],
     githubUrl: "https://github.com/jpnioule/lumea-ai-marketing-agency",
     demoUrl: "",
     demoLabel: "Voir la landing page",
     icon: `<svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9.75h4.5m-4.5 3h7.5m-7.5 3h4.5m3.75-14.25H6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 006 21h12a2.25 2.25 0 002.25-2.25V11.25l-6-6z" /><path stroke-linecap="round" stroke-linejoin="round" d="M14.25 3v4.5a2.25 2.25 0 002.25 2.25h4.5" /></svg>`,
     summary: "Écosystème marketing complet piloté par l'IA pour Luméa, une marque fictive de skincare : chatbot RAG, agent de contenu Instagram, séquence d'e-mails automatisée avec n8n et landing page déployée sur Netlify.",
-    context: "Projet du Master 2 Data Marketing (INSEEC, 2025-2026). Luméa est une marque fictive de skincare bio vendue en direct (8 produits, cible 25-40 ans, panier moyen de 45 €). Sa problématique : développer l'acquisition et le support client sans recruter, tout en professionnalisant sa présence sur les réseaux sociaux.",
+    context: "Projet du Master 2 Data Marketing (INSEEC, 2025-2026). Luméa est une marque fictive de skincare bio vendue en direct (4 soins formant un rituel en trois étapes, cible 25-40 ans, panier moyen de 45 €). Sa problématique : développer l'acquisition et le support client sans recruter, tout en professionnalisant sa présence sur les réseaux sociaux.",
     objectives: "Démontrer l'intégration de plusieurs briques d'IA générative dans un vrai parcours marketing : répondre aux clients sans inventer d'informations, produire du contenu social de façon régulière, et convertir les leads de la landing page grâce à une séquence d'e-mails automatisée.",
-    dataUsed: "Base de connaissances de 11 documents (8 fiches produits, routine, livraison et retours, engagement de marque), découpée en 16 extraits de 500 caractères avec un chevauchement de 50 caractères. Leads et contenus à valider stockés dans Airtable.",
+    dataUsed: "Base de connaissances de 7 documents (les 4 fiches produits présentées sur la landing page, le rituel matin et soir, la livraison et les retours, l'engagement de marque), découpée en 15 extraits de 500 caractères avec un chevauchement de 50 caractères. Leads et contenus à valider stockés dans Airtable.",
     tools: "Node.js, Chroma (base vectorielle locale), modèle d'embeddings multilingue local (paraphrase-multilingual-MiniLM-L12-v2), API Anthropic (Claude), n8n Cloud, Airtable, HTML/CSS/JS, Netlify, GitHub.",
     methodology: [
-      { t: "1. Chatbot RAG", d: "Indexation des 16 extraits dans Chroma, puis transmission des 10 passages les plus pertinents à Claude, avec un prompt système qui impose de répondre uniquement à partir de ce contexte." },
+      { t: "1. Chatbot RAG", d: "Indexation des 16 extraits dans Chroma avec un modèle d'embeddings multilingue, puis transmission des 10 passages les plus pertinents à Claude, avec un prompt système qui impose de répondre uniquement à partir de ce contexte. Le moteur RAG fonctionne en Node.js, côté serveur." },
       { t: "2. Agent de contenu Instagram", d: "Workflow n8n déclenché tous les 2 jours : il choisit un produit, génère un post structuré (accroche, texte, appel à l'action, hashtags, prompt image) et l'enregistre dans Airtable avec le statut « À valider »." },
       { t: "3. Nurturing par e-mail", d: "Séquence de 5 e-mails (J0 à J+14) déclenchée par le formulaire de la landing page. Avant chaque envoi, le workflow vérifie dans Airtable si le lead a déjà acheté, et arrête la séquence si c'est le cas." },
-      { t: "4. Landing page", d: "Site vitrine à l'identité de la marque, avec une frise interactive des routines, le chatbot intégré et un formulaire de capture de leads relié à n8n. Déployé sur Netlify." }
+      { t: "4. Landing page", d: "Site vitrine à l'identité de la marque, avec une frise interactive des routines, un assistant de démonstration à réponses prédéfinies et un formulaire de capture de leads relié à n8n. Déployé sur Netlify. Prochaine étape : relier l'assistant au moteur RAG via une fonction serverless." }
     ],
-    analyses: "Tests de pertinence des passages récupérés et de la fidélité des réponses du chatbot. Suivi de la délivrabilité des e-mails de la séquence.",
-    visualizations: "Landing page avec chatbot intégré, file de contenus Instagram dans Airtable et workflows n8n documentés.",
-    results: "Les 4 livrables sont fonctionnels et documentés. Le chatbot répond à partir des seules sources de la marque et indique quand il ne sait pas. Chaque post Instagram est relu par un humain avant publication, un choix assumé pour éviter tout contenu inapproprié. Pistes d'amélioration identifiées : authentifier le domaine d'envoi (SPF, DKIM, DMARC) contre le spam, et générer les visuels via une API d'images.",
-    difficulties: "Le premier modèle d'embeddings, anglophone, donnait des résultats imprécis en français. Solution : passage à un modèle multilingue et augmentation du nombre de passages récupérés de 4 à 10.",
+    analyses: "Évaluation de la recherche de passages sur un jeu de test de 10 questions de clients, avec les fiches attendues fixées à l'avance : bon passage en 1re position, dans le top 3, et MRR. Vérification de la fidélité des réponses de Claude aux fiches produits. Suivi de la délivrabilité des e-mails de la séquence.",
+    visualizations: "Réponses du chatbot RAG en ligne de commande, landing page avec son assistant de démonstration, file de contenus Instagram dans Airtable et workflows n8n documentés.",
+    results: "Les 4 livrables sont fonctionnels et documentés. Le chatbot RAG répond à partir des seules sources de la marque, avec le même catalogue que le site, et indique quand il ne sait pas. À la question « Quel produit convient pour une peau sensible ? », il recommande les 4 soins avec leurs prix, leurs formats et une précaution pour l'Élixir (l'introduire un jour sur deux) : chaque information est conforme aux fiches. Chaque post Instagram est relu par un humain avant publication, un choix assumé pour éviter tout contenu inapproprié. Pistes d'amélioration identifiées : authentifier le domaine d'envoi (SPF, DKIM, DMARC) contre le spam, et générer les visuels via une API d'images.",
+    difficulties: "Le premier modèle d'embeddings, anglophone, retrouvait mal les bons passages en français. Mesuré sur 10 questions de clients, le modèle multilingue place un bon passage dans le top 3 pour les 10 questions, contre 5 pour le modèle anglais, et fait passer le MRR de 0,48 à 0,67. Autre difficulté : la landing page et le chatbot présentaient deux catalogues différents. La base de connaissances a été réalignée sur les 4 produits du site. Limite assumée : un petit échantillon de test, à élargir.",
     skills: "Architecture RAG, bases vectorielles, prompt engineering, intégration de l'API Claude, automatisation marketing avec n8n, gestion de données dans Airtable, déploiement web."
   },
   {
@@ -248,9 +250,9 @@ function initTypewriter() {
   if (!element) return;
 
   const words = [
-    "Futur Data Analyst",
+    "Jean Philippe Nioule",
     "MSc 2 Data Marketing (INSEEC Paris)",
-    "SQL, Power BI & DAX",
+    "SQL, Python & Power BI",
     "IA générative appliquée au business"
   ];
 

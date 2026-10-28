@@ -141,12 +141,19 @@
     <section class="page-container" id="page-home">
       <!-- 1. Hero plein écran -->
       <div class="hero-cover-screen">
-        <p class="welcome-label">Portfolio</p>
-        <h1 class="hero-name">Jean Philippe Nioule</h1>
-        <h2 class="hero-title">Stage de fin d'études · Data Analytics & Business Intelligence</h2>
-        <p class="hero-tagline">Transformer la donnée brute en indicateurs clés et en insights stratégiques pour guider les décisions d'entreprise.</p>
+        <p class="welcome-label">Portfolio · Data Analytics</p>
+        <h1 class="hero-name hero-name--b"><span class="visually-hidden">Jean Philippe Nioule, </span>Data Analyst <span class="hero-name-sep" aria-hidden="true">|</span> <span class="hero-accent">Business Intelligence</span></h1>
+        <p class="hero-title hero-title--b" aria-hidden="true">Jean Philippe Nioule</p>
+        <p class="hero-status"><span class="hero-status-part"><span class="hero-status-dot" aria-hidden="true"></span>Recherche de stage de fin d’études</span><span class="hero-status-sep hero-status-sep--main" aria-hidden="true">·</span><span class="hero-status-part">Data&nbsp;Analyst&nbsp;/ BI&nbsp;Analyst<span class="hero-status-sep" aria-hidden="true">·</span>6&nbsp;mois</span></p>
+        <p class="hero-tagline">J’analyse les données, conçois des tableaux de bord et transforme les indicateurs clés en recommandations utiles à la décision.</p>
+        <ul class="hero-skills" aria-label="Compétences principales">
+          <li>SQL</li>
+          <li>Python</li>
+          <li>Power BI</li>
+        </ul>
         <div class="hero-cta-row">
           <a href="#Projects" class="btn btn-primary" id="btn-explore-projects">Découvrir mes projets</a>
+          <a href="#Connect" class="btn btn-secondary" id="btn-hero-contact">Me contacter</a>
         </div>
       </div>
 
@@ -159,9 +166,13 @@
               <img src="profile.jpg" alt="Portrait de Jean Philippe Nioule" class="hero-avatar" width="200" height="200" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('avatar-missing'); this.remove();">
               <span class="avatar-initials" aria-hidden="true">JPN</span>
             </div>
-            <div class="hero-badge-container">
-              <span class="status-badge pulsing">Stage 6 mois · Dès maintenant</span>
-            </div>
+            <p class="avatar-availability">
+              <svg class="avatar-availability-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="9.25" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 12.25l2.5 2.5 5-5.25" />
+              </svg>
+              Disponible pour un stage de 6 mois
+            </p>
             <div class="hero-actions">
               <a href="#Connect" class="btn btn-primary" id="btn-contact-me">Me contacter</a>
               <a href="https://linkedin.com/in/jean-philippe-nioule" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btn-linkedin">
@@ -172,19 +183,19 @@
           
           <!-- Right side: typewriter and "À propos de moi" -->
           <div class="home-details-right">
-            <h3 class="hero-title-typewriter" aria-label="Futur Data Analyst">
-              <span class="typewriter" id="hero-typewriter" aria-hidden="true">Futur Data Analyst</span>
+            <h3 class="hero-title-typewriter" aria-label="Jean Philippe Nioule">
+              <span class="typewriter" id="hero-typewriter" aria-hidden="true">Jean Philippe Nioule</span>
             </h3>
             <div class="about-content">
               <h3 class="section-title-small">À propos de moi</h3>
               <p class="about-text">
-                Étudiant en MSc 2 Data Marketing à l’INSEEC Paris, je recherche un <strong>stage de fin d’études en Data Analytics ou Business Intelligence</strong>.
+                Étudiant en MSc 2 Data Marketing à l’INSEEC Paris, je recherche un <strong>stage de fin d’études de 6 mois en Data Analytics ou Business Intelligence</strong>.
               </p>
               <p class="about-text">
-                Fort de 7 ans d’expérience en relation client B2B et reporting commercial, je me spécialise dans l’analyse de données. J’utilise SQL, Python et Power BI pour analyser les performances, concevoir des tableaux de bord et produire des recommandations utiles à la décision.
+                Fort de 7 ans d’expérience en relation client B2B et en reporting commercial, je développe mes compétences en analyse de données, modélisation et visualisation. J’utilise SQL, Python et Power BI pour exploiter les données, suivre les indicateurs de performance et concevoir des tableaux de bord d’aide à la décision.
               </p>
               <p class="about-text">
-                Mon profil allie compétences analytiques et compréhension métier, notamment des KPI, de la conversion et de la satisfaction client. Je m’intéresse aussi à l’IA générative et aux approches RAG.
+                Mon parcours associe une compréhension concrète des enjeux métier à une approche analytique orientée résultats, notamment dans le suivi de la performance commerciale et l’analyse de la relation client. Je m’intéresse également aux applications de l’IA générative et aux architectures RAG.
               </p>
             </div>
           </div>
@@ -305,8 +316,8 @@
             <h3 class="project-card-title">Luméa : écosystème marketing IA</h3>
             <p class="project-card-desc">Chatbot RAG, agent de contenu Instagram, nurturing e-mail avec n8n et landing page, pour une marque fictive de skincare.</p>
             <div class="project-card-kpi">
-              <span class="kpi-value">4 livrables</span>
-              <span class="kpi-label">Périmètre</span>
+              <span class="kpi-value">10/10 vs 5/10</span>
+              <span class="kpi-label">Bon passage dans le top 3</span>
             </div>
             <div class="project-card-tags">
               <span class="tag-pill">Claude API</span>
@@ -715,7 +726,7 @@
               <div class="contact-detail-icon"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg></div>
               <div class="contact-detail-text">
                 <span class="detail-label">Localisation</span>
-                <span class="detail-value">Paris, France (mobile, ouvert au télétravail)</span>
+                <span class="detail-value">Toulouse, France · Mobile en France</span>
               </div>
             </div>
 
