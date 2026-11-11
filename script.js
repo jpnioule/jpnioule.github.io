@@ -48,7 +48,7 @@ const projectsData = [
     kpi: "Bon passage dans le top 3 : 10/10 (contre 5/10)",
     tags: ["ia", "rag", "n8n"],
     githubUrl: "https://github.com/jpnioule/lumea-ai-marketing-agency",
-    demoUrl: "",
+    demoUrl: "https://lumea26.netlify.app/",
     demoLabel: "Voir la landing page",
     icon: `<svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9.75h4.5m-4.5 3h7.5m-7.5 3h4.5m3.75-14.25H6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 006 21h12a2.25 2.25 0 002.25-2.25V11.25l-6-6z" /><path stroke-linecap="round" stroke-linejoin="round" d="M14.25 3v4.5a2.25 2.25 0 002.25 2.25h4.5" /></svg>`,
     summary: "Écosystème marketing complet piloté par l'IA pour Luméa, une marque fictive de skincare : chatbot RAG, agent de contenu Instagram, séquence d'e-mails automatisée avec n8n et landing page déployée sur Netlify.",
@@ -57,7 +57,7 @@ const projectsData = [
     dataUsed: "Base de connaissances de 7 documents (les 4 fiches produits présentées sur la landing page, le rituel matin et soir, la livraison et les retours, l'engagement de marque), découpée en 15 extraits de 500 caractères avec un chevauchement de 50 caractères. Leads et contenus à valider stockés dans Airtable.",
     tools: "Node.js, Chroma (base vectorielle locale), modèle d'embeddings multilingue local (paraphrase-multilingual-MiniLM-L12-v2), API Anthropic (Claude), n8n Cloud, Airtable, HTML/CSS/JS, Netlify, GitHub.",
     methodology: [
-      { t: "1. Chatbot RAG", d: "Indexation des 16 extraits dans Chroma avec un modèle d'embeddings multilingue, puis transmission des 10 passages les plus pertinents à Claude, avec un prompt système qui impose de répondre uniquement à partir de ce contexte. Le moteur RAG fonctionne en Node.js, côté serveur." },
+      { t: "1. Chatbot RAG", d: "Indexation des 15 extraits dans Chroma avec un modèle d'embeddings multilingue, puis transmission des 10 passages les plus pertinents à Claude, avec un prompt système qui impose de répondre uniquement à partir de ce contexte. Le moteur RAG fonctionne en Node.js, côté serveur." },
       { t: "2. Agent de contenu Instagram", d: "Workflow n8n déclenché tous les 2 jours : il choisit un produit, génère un post structuré (accroche, texte, appel à l'action, hashtags, prompt image) et l'enregistre dans Airtable avec le statut « À valider »." },
       { t: "3. Nurturing par e-mail", d: "Séquence de 5 e-mails (J0 à J+14) déclenchée par le formulaire de la landing page. Avant chaque envoi, le workflow vérifie dans Airtable si le lead a déjà acheté, et arrête la séquence si c'est le cas." },
       { t: "4. Landing page", d: "Site vitrine à l'identité de la marque, avec une frise interactive des routines, un assistant de démonstration à réponses prédéfinies et un formulaire de capture de leads relié à n8n. Déployé sur Netlify. Prochaine étape : relier l'assistant au moteur RAG via une fonction serverless." }
